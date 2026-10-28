@@ -1,0 +1,26 @@
+# Free Slots Online
+
+> Free classic 3-reel slot machine in the browser: virtual chips only, no real money, no download, no ads. Paytable and symbol weights fully published, long-term RTP ≈ 96%. Bilingual English / 简体中文, pure static HTML5, zero dependencies.
+> 浏览器里的免费经典3转轮老虎机：纯虚拟筹码，绝无真钱赌博，无需下载、无广告。赔付表与符号权重完全公开，长期回报率约96%。英文/简体中文双语，纯静态 HTML5，零依赖。
+
+## Play 游戏
+
+- [Free Slot Machine Online (English)](https://vip-4.github.io/free-slots/): classic 3-reel slot machine, Space to spin, single middle payline
+- [免费老虎机在线版（简体中文）](https://vip-4.github.io/free-slots/zh/): 经典3转轮老虎机，空格旋转，中线赔付
+
+## Game facts 游戏要点
+
+- 3 reels × 3 rows, single middle payline; three matching symbols pay 8×–200× the bet; any pair returns the stake
+- 3转轮×3行，单条中线赔付；三连按8×–200×下注奖励；任意对子返还本金
+- Symbol weights per reel: cherry 26%, lemon 22%, grape 18%, bell 14%, star 10%, seven 6%, diamond 4%
+- 转轮符号权重：樱桃26%、柠檬22%、葡萄18%、铃铛14%、星星10%、幸运7 6%、钻石4%
+- Balance, bet and statistics persist in the player's own browser via localStorage; free 1,000-chip refill
+- 余额、下注与统计仅保存在玩家自己的浏览器（localStorage）；筹码可免费补充
+- Entertainment and education only, intended for adults 18+; virtual chips have no monetary value and no real-money gambling exists on this site
+- 仅供娱乐与学习，限18岁以上；虚拟筹码无任何货币价值，本站绝无真钱赌博
+
+## Mirrors 镜像仓库
+
+- [GitHub](https://github.com/vip-4/free-slots): canonical source and live site host
+- [Gitee](https://gitee.com/vip882/free-slots): mirror for mainland-China readers
+- [AtomGit](https://atomgit.com/zzw1208/free-slots): mirror for mainland-China readers

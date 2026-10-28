@@ -178,7 +178,47 @@ footer.site {
     [
       {
         "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://vip-4.github.io/free-slots/#website",
+        "url": "https://vip-4.github.io/free-slots/",
+        "name": "Free Slots Online",
+        "inLanguage": ["en", "zh-Hans"],
+        "publisher": { "@id": "https://vip-4.github.io/free-slots/#org" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://vip-4.github.io/free-slots/#org",
+        "name": "Free Slots Online",
+        "url": "https://vip-4.github.io/free-slots/",
+        "logo": { "@type": "ImageObject", "url": "https://vip-4.github.io/free-slots/favicon.svg" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://vip-4.github.io/free-slots/#webpage",
+        "url": "https://vip-4.github.io/free-slots/",
+        "name": "Free Slot Machine Online – Classic 3-Reel Fun, No Download",
+        "description": "Play a free classic 3-reel slot machine in your browser. Virtual chips only — no real money, no download, no ads. Honest paytable, keyboard friendly, mobile ready.",
+        "isPartOf": { "@id": "https://vip-4.github.io/free-slots/#website" },
+        "inLanguage": "en",
+        "about": { "@id": "https://vip-4.github.io/free-slots/#game" },
+        "primaryImageOfPage": { "@id": "https://vip-4.github.io/free-slots/#primaryimage" },
+        "significantLink": "https://vip-4.github.io/free-slots/zh/"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "@id": "https://vip-4.github.io/free-slots/#primaryimage",
+        "url": "https://vip-4.github.io/free-slots/assets/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "caption": "Classic 3-reel slot machine with golden cabinet, three white reel windows showing cherry, red seven and diamond symbols on a dark background"
+      },
+      {
+        "@context": "https://schema.org",
         "@type": "VideoGame",
+        "@id": "https://vip-4.github.io/free-slots/#game",
         "name": "Free Slot Machine Online",
         "alternateName": ["Free Slots Online", "Classic 3-Reel Slot Machine", "免费老虎机"],
         "description": "A free browser-based classic 3-reel slot machine played with virtual chips. Features a single middle payline, seven weighted symbols, a fully published paytable, pair-push consolation, spinning reel animation, sound effects, and local balance persistence. No real money, no download, no registration.",
@@ -198,8 +238,10 @@ footer.site {
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock"
         },
-        "image": "https://vip-4.github.io/free-slots/assets/og-image.png",
+        "image": { "@id": "https://vip-4.github.io/free-slots/#primaryimage" },
         "thumbnailUrl": "https://vip-4.github.io/free-slots/favicon.svg",
+        "publisher": { "@id": "https://vip-4.github.io/free-slots/#org" },
+        "mainEntityOfPage": { "@id": "https://vip-4.github.io/free-slots/#webpage" },
         "controlMethod": ["Keyboard", "Touch"],
         "controllerInput": ["Space", "Enter"],
         "numberOfPlayers": 1,
