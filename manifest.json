@@ -5,6 +5,7 @@
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
+  "lang": "en",
   "background_color": "#14060f",
   "theme_color": "#14060f",
   "categories": ["games", "entertainment"],
