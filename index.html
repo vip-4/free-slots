@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Slot Machine Online – Classic 3-Reel Fun, No Download</title>
+    <meta name="description" content="Play a free classic 3-reel slot machine in your browser. Virtual chips only — no real money, no download, no ads. Honest paytable, keyboard friendly, mobile ready.">
+    <meta name="keywords" content="free slot machine, free slots, slot machine online, play slots free, classic slots, 3 reel slots, fruit machine, virtual slots, no download slots, browser slot game, free casino game, social casino, just for fun slots">
+    <meta name="author" content="Free Slots Online">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#14060f">
+    <meta name="color-scheme" content="dark">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="canonical" href="https://vip-4.github.io/free-slots/">
+    <link rel="alternate" hreflang="en" href="https://vip-4.github.io/free-slots/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://vip-4.github.io/free-slots/zh/">
+    <link rel="alternate" hreflang="x-default" href="https://vip-4.github.io/free-slots/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Free Slots Online">
+    <meta property="og:title" content="Free Slot Machine Online – Classic 3-Reel Fun, No Download">
+    <meta property="og:description" content="A free classic 3-reel slot machine in your browser. Virtual chips only — no real money, no download, no ads. Honest paytable.">
+    <meta property="og:url" content="https://vip-4.github.io/free-slots/">
+    <meta property="og:image" content="https://vip-4.github.io/free-slots/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Classic 3-reel slot machine with golden cabinet, three white reel windows showing cherry, red seven and diamond symbols on a dark background">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Slot Machine Online – Classic 3-Reel Fun">
+    <meta name="twitter:description" content="Free classic 3-reel slots in your browser. Virtual chips only — no real money, no download, no ads.">
+    <meta name="twitter:image" content="https://vip-4.github.io/free-slots/assets/og-image.png">
+    <meta name="twitter:image:alt" content="Classic 3-reel slot machine with golden cabinet and cherry, seven and diamond symbols">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    <link rel="manifest" href="manifest.json">
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #14060f;
+  --panel: #241028;
+  --gold: #f2c14e;
+  --gold-dim: #8a6a2f;
+  --red: #e6484f;
+  --green: #58e07f;
+  --text: #f5e9f0;
+  --dim: #c9aec4;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+a { color: var(--gold); }
+a:hover { color: #ffe08a; }
+
+header.site {
+  border-bottom: 1px solid var(--gold-dim);
+  padding: 18px 0 14px;
+  background: linear-gradient(180deg, #2a0f24 0%, var(--bg) 100%);
+}
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+header.site h1 a { color: var(--gold); text-decoration: none; font-size: 1.25rem; }
+nav.toc a { margin-left: 14px; font-size: .93rem; text-decoration: none; }
+nav.toc a:first-child { margin-left: 0; }
+
+/* Machine */
+.machine {
+  background: linear-gradient(180deg, #341636 0%, var(--panel) 100%);
+  border: 2px solid var(--gold-dim);
+  border-radius: 18px;
+  padding: 20px 18px;
+  margin: 26px 0 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.45), inset 0 0 0 3px rgba(242,193,78,.12);
+}
+.machine-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.stat { font-size: 1.02rem; color: var(--dim); }
+.stat strong { color: var(--gold); font-variant-numeric: tabular-nums; font-size: 1.15rem; }
+.stat .win-amt { color: var(--green); font-weight: 700; }
+
+.reels {
+  display: flex; justify-content: center; gap: 12px;
+  background: #120812; border: 2px solid var(--gold-dim); border-radius: 12px;
+  padding: 14px; position: relative;
+}
+.payline-mark {
+  position: absolute; left: 6px; right: 6px; top: 50%; transform: translateY(-50%);
+  height: 74px; border-top: 2px dashed rgba(242,193,78,.5); border-bottom: 2px dashed rgba(242,193,78,.5);
+  pointer-events: none;
+}
+.reel { display: flex; flex-direction: column; gap: 4px; }
+.sym {
+  width: 86px; height: 70px; display: flex; align-items: center; justify-content: center;
+  font-size: 2.6rem; line-height: 1;
+  background: #fdf8ef; color: #1d0d16; border-radius: 8px;
+  box-shadow: inset 0 -3px 0 rgba(0,0,0,.18);
+  user-select: none;
+}
+.sym.spin-anim { filter: blur(1.5px); opacity: .85; }
+.sym.hit { background: #fff3c4; box-shadow: 0 0 0 2px var(--gold), 0 0 18px rgba(242,193,78,.55); }
+
+.machine-controls { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.chip {
+  background: #3a1a3e; color: var(--text); border: 1px solid var(--gold-dim); border-radius: 999px;
+  padding: 7px 14px; font: inherit; font-weight: 700; cursor: pointer;
+}
+.chip.active { background: var(--gold); color: #241028; border-color: var(--gold); }
+.chip:focus-visible, .btn:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+.chip[disabled], .btn[disabled] { opacity: .5; cursor: not-allowed; }
+.btn {
+  background: var(--red); color: #fff; border: none; border-radius: 12px;
+  padding: 12px 30px; font: inherit; font-size: 1.1rem; font-weight: 800; letter-spacing: 1px; cursor: pointer;
+  box-shadow: 0 4px 0 #8f2730;
+}
+.btn:active { transform: translateY(2px); box-shadow: 0 2px 0 #8f2730; }
+.btn.secondary { background: #3a1a3e; box-shadow: 0 4px 0 #1c0b20; padding: 10px 16px; font-size: .95rem; }
+#message { text-align: center; min-height: 1.4em; margin: 12px 0 2px; font-weight: 700; }
+#message.win { color: var(--green); }
+#message.lose { color: var(--red); }
+.stage-hint { text-align: center; color: var(--dim); font-size: .9rem; margin-bottom: 8px; }
+kbd {
+  background: #3a1a3e; border: 1px solid var(--gold-dim); border-bottom-width: 2px;
+  border-radius: 5px; padding: 1px 7px; font-family: Consolas, monospace; font-size: .88em;
+}
+.machine-stats { display: flex; justify-content: center; gap: 22px; color: var(--dim); font-size: .9rem; margin-top: 6px; }
+
+main section { margin: 44px 0; }
+h2 { color: var(--gold); font-size: 1.45rem; margin-bottom: 12px; }
+.content { color: var(--dim); max-width: 800px; }
+.content p { margin: 10px 0; }
+ol, ul { padding-left: 1.4rem; margin: 10px 0; }
+li { margin: 4px 0; }
+dl.controls > div, dl.faq > div { margin-bottom: 16px; }
+dl.controls dt { font-weight: 700; color: var(--gold); }
+dl.controls dd, dl.faq dd { color: var(--dim); }
+dl.faq dt { font-weight: 700; color: var(--text); }
+table.paytable { border-collapse: collapse; width: 100%; max-width: 640px; font-size: .98rem; margin: 10px 0; }
+table.paytable th, table.paytable td { padding: 8px 14px; text-align: left; border-bottom: 1px solid var(--gold-dim); }
+table.paytable thead th { color: var(--gold); border-bottom: 2px solid var(--gold-dim); }
+table.paytable td:last-child, table.paytable th:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+.notice {
+  border: 1px solid var(--gold-dim); border-left: 4px solid var(--gold);
+  border-radius: 10px; padding: 12px 16px; background: rgba(242,193,78,.06); max-width: 800px;
+}
+.keyline { color: var(--dim); font-size: .95rem; }
+
+footer.site {
+  border-top: 1px solid var(--gold-dim); margin-top: 48px; padding: 26px 6px;
+  color: var(--dim); font-size: .93rem; text-align: center;
+}
+.lang-nav { font-size: .95rem; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: absolute; left: -9999px; top: 0; background: var(--gold); color: #241028;
+  padding: 8px 14px; border-radius: 0 0 8px 0; z-index: 10; font-weight: 700;
+}
+.skip-link:focus { left: 0; }
+
+@media (max-width: 480px) {
+  .sym { width: 72px; height: 60px; font-size: 2.1rem; }
+  .payline-mark { height: 62px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+</style>
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Free Slot Machine Online",
+        "alternateName": ["Free Slots Online", "Classic 3-Reel Slot Machine", "免费老虎机"],
+        "description": "A free browser-based classic 3-reel slot machine played with virtual chips. Features a single middle payline, seven weighted symbols, a fully published paytable, pair-push consolation, spinning reel animation, sound effects, and local balance persistence. No real money, no download, no registration.",
+        "url": "https://vip-4.github.io/free-slots/",
+        "genre": ["Casual", "Social Casino", "Arcade"],
+        "gamePlatform": "Web Browser",
+        "applicationCategory": "Game",
+        "operatingSystem": "Any (HTML5 browser)",
+        "playMode": "SinglePlayer",
+        "datePublished": "2026-10-28",
+        "dateModified": "2026-10-28",
+        "inLanguage": ["en", "zh-Hans"],
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "image": "https://vip-4.github.io/free-slots/assets/og-image.png",
+        "thumbnailUrl": "https://vip-4.github.io/free-slots/favicon.svg",
+        "controlMethod": ["Keyboard", "Touch"],
+        "controllerInput": ["Space", "Enter"],
+        "numberOfPlayers": 1,
+        "gameLocation": {
+          "@type": "VirtualLocation",
+          "url": "https://vip-4.github.io/free-slots/"
+        },
+        "softwareRequirements": "JavaScript enabled, HTML5 compatible browser",
+        "storageRequirements": "No storage required (balance saved in localStorage)",
+        "accessibilityFeature": ["KeyboardControl", "HighContrast", "ScreenReaderCompatible"],
+        "accessibilityControl": ["Keyboard", "Touch"],
+        "accessibilitySummary": "Playable entirely with a keyboard (Space to spin) or by touch. Result messages are announced via ARIA live regions, and the paytable is available as plain text.",
+        "keywords": ["free slots", "slot machine", "classic slots", "fruit machine", "social casino", "virtual chips", "browser game", "HTML5"]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is this slot machine really free?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. This online slot machine is 100% free to play in any modern browser. There are no downloads, no registration, no ads, and no in-game purchases. You play with virtual chips that have no monetary value." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I win real money playing this slot game?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. This is a just-for-fun social casino game. All chips are virtual, cannot be purchased, sold or exchanged, and there is no real-money gambling of any kind. If you run out of chips, a free refill is one click away." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do the odds work in this slot machine?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The game is fully transparent: each reel stop is an independent weighted random draw, the symbol weights and the complete paytable are published on this page, and the long-term return to player is approximately 96%. Three matching symbols pay 8x to 200x your bet depending on the symbol; any pair returns your stake." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I play the slot machine?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Choose a bet from 5 to 100 virtual chips, then press the Spin button or the Space key. The three reels stop one by one and the middle payline is evaluated. Three matching symbols pay the table multiplier; any pair returns your stake." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the slot machine work on my phone?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. The game is mobile-first and responsive: tap the chips and the Spin button on iOS or Android, or press Space on a desktop keyboard. Your balance is saved automatically on your own device." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is playing slots responsibly important?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. This game is for entertainment and education only, intended for adults 18 and over. Because no real money is involved there is no financial risk, but if you choose to play real-money slot machines elsewhere, always set limits, never chase losses, and seek help from responsible gambling resources if play stops being fun." }
+          }
+        ]
+      }
+    ]
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#game">Skip to game</a>
+<header class="site">
+    <div class="wrap">
+        <h1><a href="https://vip-4.github.io/free-slots/">Free Slot Machine Online</a></h1>
+        <nav class="toc" aria-label="Page navigation">
+            <a href="#game">Play</a>
+            <a href="#how-to">How to Play</a>
+            <a href="#paytable">Paytable</a>
+            <a href="#fair">Fairness</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+    </div>
+</header>
+
+<main class="wrap">
+    <p class="keyline">A classic 3-reel slot machine in your browser — virtual chips only, honest published odds, no download, no ads, no real money. Just spin and have fun.</p>
+
+    <section id="game" aria-label="Slot machine game">
+        <div class="machine" role="group" aria-label="Slot machine">
+            <div class="machine-top">
+                <span class="stat">Chips: <strong id="balance">1,000</strong></span>
+                <span class="stat">Last win: <strong class="win-amt" id="last-win">—</strong></span>
+            </div>
+            <div class="reels">
+                <div class="payline-mark" aria-hidden="true"></div>
+                <div class="reel" aria-label="Reel 1"><div class="sym">🍒</div><div class="sym">🍋</div><div class="sym">🍇</div></div>
+                <div class="reel" aria-label="Reel 2"><div class="sym">🔔</div><div class="sym">⭐</div><div class="sym">7️⃣</div></div>
+                <div class="reel" aria-label="Reel 3"><div class="sym">💎</div><div class="sym">🍒</div><div class="sym">🍋</div></div>
+            </div>
+            <div class="machine-controls" role="group" aria-label="Bet selection">
+                <button type="button" class="chip" id="bet-5">5</button>
+                <button type="button" class="chip" id="bet-10">10</button>
+                <button type="button" class="chip" id="bet-25">25</button>
+                <button type="button" class="chip" id="bet-50">50</button>
+                <button type="button" class="chip" id="bet-100">100</button>
+            </div>
+            <div class="machine-controls">
+                <button type="button" class="btn" id="btn-spin">SPIN</button>
+                <button type="button" class="btn secondary" id="btn-sound">Sound: On</button>
+                <button type="button" class="btn secondary" id="btn-new">New Game</button>
+            </div>
+            <p id="message" class="message" role="status" aria-live="polite">Place your bet and press SPIN.</p>
+            <div class="machine-stats">
+                <span class="stat">Spins: <strong id="stat-spins">0</strong></span>
+                <span class="stat">Best win: <strong id="stat-best">0</strong></span>
+            </div>
+        </div>
+        <p class="stage-hint"><kbd>Space</kbd> spin · virtual chips only — no real money</p>
+    </section>
+
+    <section id="how-to">
+        <h2>How to Play the Slot Machine</h2>
+        <dl class="controls content">
+            <div><dt>1. Choose your bet</dt><dd>Tap 5, 10, 25, 50 or 100 virtual chips. Your bet is deducted when the reels start spinning.</dd></div>
+            <div><dt>2. Spin</dt><dd>Press <kbd>SPIN</kbd> or the <kbd>Space</kbd> key. The three reels stop one after another.</dd></div>
+            <div><dt>3. Read the payline</dt><dd>Only the middle row pays. Three matching symbols pay the multiplier from the paytable; any pair returns your stake.</dd></div>
+            <div><dt>4. Collect</dt><dd>Winnings are added to your balance automatically and saved in your browser. Running low? Press New Game for a free 1,000-chip refill.</dd></div>
+        </dl>
+    </section>
+
+    <section id="paytable">
+        <h2>Paytable &amp; Odds</h2>
+        <div class="content">
+            <p>Each reel stop is an independent weighted draw. The chance of a symbol appearing on a reel is proportional to its weight below.</p>
+        </div>
+        <table class="paytable">
+            <caption class="sr-only">Slot machine paytable: symbol, reel weight, three-of-a-kind multiplier</caption>
+            <thead><tr><th scope="col">Symbol</th><th scope="col">Reel weight</th><th scope="col">3 of a kind pays</th></tr></thead>
+            <tbody>
+                <tr><td>🍒 Cherry</td><td>26%</td><td>8 × bet</td></tr>
+                <tr><td>🍋 Lemon</td><td>22%</td><td>12 × bet</td></tr>
+                <tr><td>🍇 Grape</td><td>18%</td><td>15 × bet</td></tr>
+                <tr><td>🔔 Bell</td><td>14%</td><td>30 × bet</td></tr>
+                <tr><td>⭐ Star</td><td>10%</td><td>50 × bet</td></tr>
+                <tr><td>7️⃣ Seven</td><td>6%</td><td>100 × bet</td></tr>
+                <tr><td>💎 Diamond</td><td>4%</td><td>200 × bet</td></tr>
+                <tr><td>Any pair</td><td>—</td><td>stake returned</td></tr>
+            </tbody>
+        </table>
+        <p class="content keyline">Long-term return to player: ≈ 96%. Wins are paid on the middle payline only.</p>
+    </section>
+
+    <section id="fair">
+        <h2>Fairness &amp; Responsible Play</h2>
+        <div class="notice content">
+            <p><strong>Virtual chips only.</strong> This is a social casino game for entertainment and education. Chips have no monetary value, cannot be bought or sold, and no real-money gambling exists on this page. If you run out, refills are free.</p>
+            <p><strong>Honest math.</strong> The symbol weights and paytable on this page are the actual values used by the game code — no hidden adjustments. Spins are independent draws in your browser.</p>
+            <p><strong>Play responsibly.</strong> Intended for adults 18+. If you play real-money slots elsewhere, set a budget, never chase losses, and remember that slots are games of chance with a house edge.</p>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2>Free Slots FAQ</h2>
+        <dl class="faq content">
+            <div><dt>Is this slot machine really free?</dt><dd>Yes. This online slot machine is 100% free to play in any modern browser. There are no downloads, no registration, no ads, and no in-game purchases. You play with virtual chips that have no monetary value.</dd></div>
+            <div><dt>Can I win real money playing this slot game?</dt><dd>No. This is a just-for-fun social casino game. All chips are virtual, cannot be purchased, sold or exchanged, and there is no real-money gambling of any kind. If you run out of chips, a free refill is one click away.</dd></div>
+            <div><dt>How do the odds work in this slot machine?</dt><dd>The game is fully transparent: each reel stop is an independent weighted random draw, the symbol weights and the complete paytable are published on this page, and the long-term return to player is approximately 96%. Three matching symbols pay 8x to 200x your bet depending on the symbol; any pair returns your stake.</dd></div>
+            <div><dt>How do I play the slot machine?</dt><dd>Choose a bet from 5 to 100 virtual chips, then press the Spin button or the Space key. The three reels stop one by one and the middle payline is evaluated. Three matching symbols pay the table multiplier; any pair returns your stake.</dd></div>
+            <div><dt>Does the slot machine work on my phone?</dt><dd>Yes. The game is mobile-first and responsive: tap the chips and the Spin button on iOS or Android, or press Space on a desktop keyboard. Your balance is saved automatically on your own device.</dd></div>
+            <div><dt>Is playing slots responsibly important?</dt><dd>Yes. This game is for entertainment and education only, intended for adults 18 and over. Because no real money is involved there is no financial risk, but if you choose to play real-money slot machines elsewhere, always set limits, never chase losses, and seek help from responsible gambling resources if play stops being fun.</dd></div>
+        </dl>
+    </section>
+</main>
+
+<footer class="site" role="contentinfo">
+    <p>Free Slots Online is an entertainment HTML5 game built with semantic HTML and vanilla JavaScript — zero dependencies, mobile friendly, 18+, virtual chips only with no real-money gambling.</p>
+    <p class="lang-nav">🌐 Languages: <a href="https://vip-4.github.io/free-slots/zh/" hreflang="zh-Hans">中文版（免费老虎机在线玩）</a></p>
+    <p>© 2026 Free Slots Online · For entertainment and education only · 18+ · No real-money gambling</p>
+</footer>
+
+<script>
+window.SLOT_I18N = {
+  placeBet: "Place your bet and press SPIN.",
+  spinning: "Spinning…",
+  youWin: "You win {win} chips!",
+  jackpot: "JACKPOT! {win} chips!",
+  push: "Pair — your stake is returned.",
+  youLose: "No luck this spin. Try again!",
+  needChips: "Not enough chips — lower your bet or press New Game.",
+  broke: "Out of chips — refilled 1,000 free chips. Have fun!",
+  reset: "Fresh 1,000 chips. Good luck!",
+  betSet: "Bet set to {bet} chips.",
+  soundOn: "Sound: On", soundOff: "Sound: Off"
+};
+</script>
+<script defer>
+/* Free Slot Machine — vanilla JS, zero dependencies
+   3 reels × 3 rows, single middle payline, virtual chips only (no real money) */
+(function () {
+  'use strict';
+  var $ = function (s) { return document.querySelector(s); };
+  var T = window.SLOT_I18N;
+
+  /* Symbol weights per 100 stops and paytable (three-of-a-kind multiplier) */
+  var SYMBOLS = ['cherry', 'lemon', 'grape', 'bell', 'star', 'seven', 'diamond'];
+  var GLYPH = { cherry: '🍒', lemon: '🍋', grape: '🍇', bell: '🔔', star: '⭐', seven: '7️⃣', diamond: '💎' };
+  var WEIGHTS = [26, 22, 18, 14, 10, 6, 4];               /* sums to 100 */
+  var PAYS = { cherry: 8, lemon: 12, grape: 15, bell: 30, star: 50, seven: 100, diamond: 200 };
+  var BETS = [5, 10, 25, 50, 100];
+  var START = 1000;
+
+  var state = {
+    balance: START,
+    bet: 25,
+    sound: true,
+    spinning: false,
+    stats: { spins: 0, bestWin: 0, totalWon: 0 }
+  };
+
+  var el = {};
+  var audio = null;
+
+  /* ---------- helpers ---------- */
+  function load() {
+    try {
+      var b = parseInt(localStorage.getItem('slot_balance'), 10);
+      if (b >= 0 && b <= 1000000) state.balance = b;
+      var s = localStorage.getItem('slot_sound');
+      if (s === '0') state.sound = false;
+      var st = JSON.parse(localStorage.getItem('slot_stats') || 'null');
+      if (st && typeof st === 'object') state.stats = st;
+      var bet = parseInt(localStorage.getItem('slot_bet'), 10);
+      if (BETS.indexOf(bet) >= 0) state.bet = bet;
+    } catch (e) { /* storage unavailable */ }
+  }
+  function save() {
+    try {
+      localStorage.setItem('slot_balance', String(state.balance));
+      localStorage.setItem('slot_sound', state.sound ? '1' : '0');
+      localStorage.setItem('slot_bet', String(state.bet));
+      localStorage.setItem('slot_stats', JSON.stringify(state.stats));
+    } catch (e) { /* storage unavailable */ }
+  }
+  function fmt(n) { return Number(n).toLocaleString(); }
+  function say(text, cls) {
+    el.msg.textContent = text;
+    el.msg.className = 'message' + (cls ? ' ' + cls : '');
+  }
+
+  /* ---------- audio ---------- */
+  function beep(freq, dur, type) {
+    if (!state.sound) return;
+    try {
+      audio = audio || new (window.AudioContext || window.webkitAudioContext)();
+      var o = audio.createOscillator(), g = audio.createGain();
+      o.type = type || 'square'; o.frequency.value = freq;
+      g.gain.setValueAtTime(0.04, audio.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.0001, audio.currentTime + dur);
+      o.connect(g); g.connect(audio.destination);
+      o.start(); o.stop(audio.currentTime + dur);
+    } catch (e) { /* audio unavailable */ }
+  }
+  function winJingle(big) {
+    if (!state.sound) return;
+    var notes = big ? [523, 659, 784, 1047] : [523, 659, 784];
+    for (var i = 0; i < notes.length; i++) {
+      setTimeout(function (f) { return function () { beep(f, 0.18, 'triangle'); }; }(notes[i]), i * 120);
+    }
+  }
+
+  /* ---------- reels ---------- */
+  function pick() {
+    var r = Math.random() * 100, acc = 0;
+    for (var i = 0; i < SYMBOLS.length; i++) { acc += WEIGHTS[i]; if (r < acc) return SYMBOLS[i]; }
+    return SYMBOLS[0];
+  }
+  function setReel(idx, arr) {
+    var cells = el.reelCells[idx];
+    for (var i = 0; i < 3; i++) cells[i].textContent = GLYPH[arr[i]];
+  }
+  function neighbors(sym) {
+    var i = SYMBOLS.indexOf(sym);
+    var prev = SYMBOLS[(i - 1 + SYMBOLS.length) % SYMBOLS.length];
+    var next = SYMBOLS[(i + 1) % SYMBOLS.length];
+    return [prev, sym, next];
+  }
+
+  /* ---------- game flow ---------- */
+  function render() {
+    el.balance.textContent = fmt(state.balance);
+    el.win.textContent = state.lastWin ? '+' + fmt(state.lastWin) : '—';
+    for (var i = 0; i < BETS.length; i++) {
+      var b = el.bets[i];
+      b.disabled = state.spinning;
+      b.setAttribute('aria-pressed', String(BETS[i] === state.bet));
+      b.className = 'chip' + (BETS[i] === state.bet ? ' active' : '');
+    }
+    el.spin.disabled = state.spinning;
+    el.sound.textContent = state.sound ? T.soundOn : T.soundOff;
+    el.spins.textContent = fmt(state.stats.spins);
+    el.best.textContent = fmt(state.stats.bestWin);
+  }
+
+  function evaluate(res) {
+    var win = 0, kind = 'lose';
+    if (res[0] === res[1] && res[1] === res[2]) {
+      win = state.bet * PAYS[res[0]];
+      kind = res[0] === 'seven' || res[0] === 'diamond' ? 'jackpot' : 'win';
+    } else if (res[0] === res[1] || res[1] === res[2] || res[0] === res[2]) {
+      win = state.bet; /* pair pushes: stake back */
+      kind = 'push';
+    }
+    state.balance = Math.min(1000000, state.balance + win);
+    state.stats.spins++;
+    if (win > state.stats.bestWin) state.stats.bestWin = win;
+    if (win > 0) state.stats.totalWon += win;
+    state.lastWin = win;
+    save();
+
+    for (var i = 0; i < 3; i++) el.reelCells[i][1].classList.toggle('hit', win > 0 && kind !== 'push');
+    if (kind === 'jackpot') { say(T.jackpot.replace('{win}', fmt(win)), 'win'); winJingle(true); }
+    else if (kind === 'win') { say(T.youWin.replace('{win}', fmt(win)), 'win'); winJingle(false); }
+    else if (kind === 'push') { say(T.push); }
+    else { say(T.youLose); }
+
+    if (state.balance < BETS[0]) {
+      state.balance = START;
+      state.stats = { spins: 0, bestWin: 0, totalWon: 0 };
+      save();
+      say(T.broke, 'lose');
+    }
+    state.spinning = false;
+    render();
+  }
+
+  function spin() {
+    if (state.spinning) return;
+    if (state.balance < state.bet) { say(T.needChips, 'lose'); return; }
+    state.spinning = true;
+    state.lastWin = 0;
+    state.balance -= state.bet;
+    say(T.spinning);
+    for (var i = 0; i < 3; i++) el.reelCells[i][1].classList.remove('hit');
+    render();
+
+    var results = [pick(), pick(), pick()];
+    var stops = [700, 1250, 1800];
+    for (var r = 0; r < 3; r++) {
+      (function (idx) {
+        var cells = el.reelCells[idx];
+        cells[0].classList.add('spin-anim'); cells[1].classList.add('spin-anim'); cells[2].classList.add('spin-anim');
+        var iv = setInterval(function () {
+          var cur = [pick(), pick(), pick()];
+          setReel(idx, cur);
+          beep(220 + idx * 60, 0.02);
+        }, 80);
+        setTimeout(function () {
+          clearInterval(iv);
+          cells[0].classList.remove('spin-anim'); cells[1].classList.remove('spin-anim'); cells[2].classList.remove('spin-anim');
+          setReel(idx, neighbors(results[idx]));
+          beep(660, 0.06, 'triangle');
+          if (idx === 2) setTimeout(function () { evaluate(results); }, 260);
+        }, stops[idx]);
+      })(r);
+    }
+  }
+
+  function setBet(v) {
+    if (state.spinning) return;
+    state.bet = v;
+    save(); render();
+    say(T.betSet.replace('{bet}', fmt(v)));
+  }
+  function toggleSound() {
+    state.sound = !state.sound;
+    save(); render();
+  }
+  function newGame() {
+    if (state.spinning) return;
+    state.balance = START;
+    state.stats = { spins: 0, bestWin: 0, totalWon: 0 };
+    state.lastWin = 0;
+    save(); render();
+    say(T.reset);
+  }
+
+  /* ---------- init ---------- */
+  load();
+  el.balance = $('#balance');
+  el.win = $('#last-win');
+  el.msg = $('#message');
+  el.spin = $('#btn-spin');
+  el.sound = $('#btn-sound');
+  el.spins = $('#stat-spins');
+  el.best = $('#stat-best');
+  el.bets = [$('#bet-5'), $('#bet-10'), $('#bet-25'), $('#bet-50'), $('#bet-100')];
+  el.reelCells = [[], [], []];
+  var reels = document.querySelectorAll('.reel');
+  for (var r = 0; r < reels.length; r++) {
+    var cells = reels[r].querySelectorAll('.sym');
+    for (var c = 0; c < cells.length; c++) el.reelCells[r].push(cells[c]);
+  }
+  /* initial face: random strips */
+  for (var k = 0; k < 3; k++) setReel(k, [pick(), pick(), pick()]);
+
+  el.spin.addEventListener('click', spin);
+  el.sound.addEventListener('click', toggleSound);
+  for (var j = 0; j < BETS.length; j++) {
+    (function (idx) {
+      el.bets[idx].addEventListener('click', function () { setBet(BETS[idx]); });
+    })(j);
+  }
+  $('#btn-new').addEventListener('click', newGame);
+  document.addEventListener('keydown', function (e) {
+    if (e.code === 'Space' && !/^(INPUT|TEXTAREA|BUTTON)$/.test(document.activeElement.tagName)) {
+      e.preventDefault(); spin();
+    }
+  });
+
+  say(T.placeBet);
+  render();
+})();
+
+</script>
+</body>
+</html>

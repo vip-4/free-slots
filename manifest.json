@@ -1,0 +1,25 @@
+{
+  "name": "Free Slot Machine Online - Classic 3-Reel Slots",
+  "short_name": "Free Slots",
+  "description": "Play a free classic 3-reel slot machine in your browser. Virtual chips only, no real money, no download.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#14060f",
+  "theme_color": "#14060f",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
